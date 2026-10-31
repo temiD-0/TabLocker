@@ -14,27 +14,16 @@ It first asks the user for a name for the snap shot. Then it takes all the open 
 ## Tech Stack
 
 - **Language:** JavaScript, Html, and CSS.
-- **Libraries:** Chrome library
+- **Libraries:** Chrome Extension API Reference
 - **External tools:** Chrome API's
 
 ## Setup
 
-Step-by-step: how does someone who just cloned your repo get it
-running?
-
-```bash
-git clone https://github.com/you/your-project
-cd your-project
-./install.sh   # or whatever
-```
+PENDING
 
 ## Usage
 
-How to actually run the thing, with examples.
-
-```bash
-./backup.sh ~/Documents
-```
+PENDING
 
 ## Roadmap
 
