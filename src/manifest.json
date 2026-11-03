@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "TabVault",
+  "version": "0.1.0",
+  "description": "Save or Restore named snapshots of open tabs in a window.",
+  "action": { "default_popup": "popup.html" },
+  "permissions": ["tabs", "storage"]
+}
