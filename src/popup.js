@@ -1,5 +1,5 @@
 const popheader = document.getElementById("test");
-popheader.textContent = "Success"; 
+popheader.textContent = "Welcome User"; 
 
 async function getAllTabs() {
 	let queryOptions = { currentWindow: true };
@@ -11,12 +11,33 @@ async function getAllTabs() {
   	}));
 }
 
-async function tabLog() {
+async function createSnapshot(name) {
 
 	let tabsList = await getAllTabs();
-	tabsList.forEach(({ name, url }) => {
-    		console.log("Title: " + name + ", URL: " + url);
-  	});
+	console.log(name + tabsList);
+	return { 
+		snapshotname: name,
+		timeCreated: Date.now(),
+		tabData: tabsList
+		
+	};
+	
 }
 
-tabLog();
+document.getElementById("save").onclick  = async (event) => {
+	event.preventDefault(); 
+	let sname = document.getElementById("snapname").value;
+	if (!(sname === "")) {
+
+		await createSnapshot(sname);
+		const popheader = document.getElementById("test");
+		popheader.textContent = "Snapshot succesfully saved"; 
+
+	} else {
+	
+		let popheader = document.getElementById("test");
+		popheader.textContent = "Please enter a valid name";
+
+	}
+
+}
